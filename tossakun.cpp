@@ -22,14 +22,14 @@
 #define _BV(shift) (shift << 6)
 #define JOY_DEV "/dev/input/js0"
 
-#define PIN_PWM1 13
-#define PIN_PWM2 12
+#define PIN_PWM2 13
+#define PIN_PWM1 12
 
-#define DIR1_A 19
-#define DIR2_A 26
+#define DIR1_B 26 
+#define DIR2_B 19
 
-#define DIR1_B 20
-#define DIR2_B 21
+#define DIR1_A 20
+#define DIR2_A 21
 
 #define HIGH 1
 #define LOW 0
@@ -37,9 +37,9 @@
 #define SECOND(x) 1000000*x
 #define MILLIS(x) 1000*x
 
-#define A_KEY 0
-#define X_KEY 2
-#define Y_KEY 3
+#define A_KEY 2
+#define X_KEY 3
+#define Y_KEY 0
 #define B_KEY 1
 
 //23 24 25
@@ -455,7 +455,7 @@ int main()
 					sendData(7,0,20,0); //tar 7
 
 					gpioDelay(MILLIS(500));
-					// system("screen -dmS 'play' ./play 0005.mp3");
+					system("screen -dmS 'play' ./play PPAP.mp3");
 					check8 = 1;
 				}
 			}else{
@@ -467,7 +467,7 @@ int main()
 					sendData(8,0,0,0); //tar 8
 
 					gpioDelay(MILLIS(500));
-					// system("screen -dmS 'play' ./play 0005.mp3");
+					system("screen -dmS 'play' ./play 0008.mp3");
 					check9 = 1;
 				}
 			}else{
